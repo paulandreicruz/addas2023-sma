@@ -6,9 +6,10 @@ const {
   generateVerificationtoken,
 } = require("../helpers/auth");
 const nodemailer = require("nodemailer");
+const jwt = require("jsonwebtoken");
 
 /** Controller function for user registration*/
-const register = async (req, res) => {
+const registerAuth = async (req, res) => {
   try {
     const { username, password, email, firstname, lastname } = req.body;
 
@@ -112,7 +113,8 @@ const register = async (req, res) => {
   }
 };
 
-const verifyemail = async (req, res) => {
+/** Controller function for user verification*/
+const verifyEmail = async (req, res) => {
   try {
     const { token } = req.params;
 
@@ -136,16 +138,18 @@ const verifyemail = async (req, res) => {
     return res.status(201).json({ message: "Email has successfully verified" });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: "An error occurred" });
+    res.status(500).json({ message: err.message });
   }
 };
 
-const resendemailverification = async (req, res) => {
+/** Controller function for user verification email resend*/
+const resendEmailVerification = async (req, res) => {
   try {
     const { email } = req.params;
 
     const user = await User.findOne({ email });
 
+    //Validations
     if (!user) {
       return res.status(400).json({ error: "User not found" });
     }
@@ -223,8 +227,52 @@ const resendemailverification = async (req, res) => {
     res.json({ message: "New verification email sent successfully" });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: "An error occured" });
+    res.status(500).json({ message: err.message });
   }
 };
 
-module.exports = { register, verifyemail, resendemailverification };
+/** Controller function for user login*/
+const loginAuth = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    //Validations
+    if (!username) {
+      res.json({ error: "Username required" });
+    }
+    if (!password) {
+      res.json({ error: "Password is required" });
+    }
+    const user = await User.findOne({ username });
+    if (!user) {
+      res.json({ error: "User not found" });
+    }
+    if (user.isVerified === false) {
+      res.json({
+        error: "Please check your email for confirmation before logging in",
+      });
+    }
+    //Compare password
+    const matchingpassword = await comparePassword(password, user.password);
+    if (!matchingpassword) {
+      return res.json({ error: "Wrong Password" });
+    }
+    //Assign a jwt token
+    const token = jwt.sign(
+      { username: user.username, _id: user._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+    res.status(200).json({ user, token });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err.message });
+  }
+};
+
+module.exports = {
+  registerAuth,
+  verifyEmail,
+  resendEmailVerification,
+  loginAuth,
+};

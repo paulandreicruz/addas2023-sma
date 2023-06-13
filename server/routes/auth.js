@@ -4,14 +4,20 @@ const router = require("express").Router();
 
 //Import controllers from auth.js
 const {
-  register,
-  verifyemail,
-  resendemailverification,
+  resendEmailVerification,
+  verifyEmail,
+  registerAuth,
+  loginAuth,
 } = require("../controllers/auth");
 
 //ROUTES
-router.post("/register", register);
-router.get("/verify-email/:token", verifyemail);
-router.post("/rsend-verificaiton", resendemailverification);
+
+//POST
+router.post("/register", registerAuth);
+router.post("/rsend-verificaiton", resendEmailVerification);
+router.post("/login", loginAuth);
+
+//GET
+router.get("/verify-email/:token", verifyEmail);
 
 module.exports = router;

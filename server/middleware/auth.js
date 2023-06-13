@@ -10,6 +10,7 @@ const requireSignin = (req, res, next) => {
     );
 
     req.user = decoded;
+    console.log("User information:", req.user);
     next();
   } catch (err) {
     console.log(err);
@@ -17,6 +18,7 @@ const requireSignin = (req, res, next) => {
   }
 };
 
+/** Middleware function for Admin Auth */
 const adminAuth = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
