@@ -1,0 +1,11 @@
+ <div className="md:flex md:py-8 md:px-8 max-w-[1500px] mx-auto items-center md:justify-between font-roboto">
+      <div className="hidden md:block ">LEFT</div>
+      <div className="mx-auto flex py-8 px-8 md:hidden ">
+        <div className="flex justify-items-start">
+          <div className="md:hidden">AVATAR</div>
+        </div>
+        <div className="md:hidden mx-auto font-anton uppercase">Addas</div>
+      </div>
+      <div className="mt-8 flex justify-center">Timeline Post</div>
+      <div className="hidden md:block md:h-fit">RIGHT</div>
+    </div>

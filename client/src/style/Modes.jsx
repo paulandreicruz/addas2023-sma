@@ -7,7 +7,7 @@ export const Modes = () => {
   }, []);
 
   return (
-    <div className="flex justify-end px-7 py-5 transition ease-in-out delay-150 hover:-translate-y-2 duration-200 ">
+    <div className="flex justify-end pt-2 px-2">
       <label className="swap swap-rotate">
         <input type="checkbox" className="" />
         <svg
@@ -22,7 +22,7 @@ export const Modes = () => {
         <svg
           data-set-theme="pastel"
           data-act-class="ACTIVECLASS"
-          className="swap-off fill-current w-7 h-7" 
+          className="swap-off fill-current w-7 h-7"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

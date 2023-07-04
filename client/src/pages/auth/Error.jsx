@@ -23,9 +23,9 @@ export const Error = () => {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center md:flex">
         <NavLink to="/">
-          <button className="btn font-roboto text-xl bg-sky-700 w-36 rounded-full">
+          <button className="btn font-roboto text-xl bg-sky-700 w-48 rounded-full">
             Go Back <IoReturnDownBackSharp />
           </button>
         </NavLink>

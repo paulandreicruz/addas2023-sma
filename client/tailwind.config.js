@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      roboto: ["Roboto Condensed", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
+      anton: ["Anton", "sans-serif"],
     },
   },
   daisyui: {
