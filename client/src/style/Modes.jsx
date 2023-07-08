@@ -5,7 +5,6 @@ export const Modes = () => {
   useEffect(() => {
     themeChange(false);
   }, []);
-
   return (
     <div className="flex justify-end pt-2 px-2">
       <label className="swap swap-rotate">
