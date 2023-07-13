@@ -11,7 +11,7 @@ export const Home = () => {
     <>
       <div className="md:flex">
         <div className="hidden md:block md:max-w-[300px] font-roboto ml-7 mb-5 items-center">
-          <div className="md:flex items-center">
+          <div className="md:flex md:overflow-y-auto items-center">
             <div className="text-center">
               <img src={logo} alt="" className="w-12" />
             </div>

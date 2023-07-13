@@ -19,4 +19,9 @@ export const MockFollowers = [
     username: "revlonsemaj",
     img: "Asd",
   },
+  {
+    name: "Andrei jeb",
+    username: "revlonsemaj",
+    img: "Asd",
+  },
 ];
