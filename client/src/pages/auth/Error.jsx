@@ -1,12 +1,10 @@
 import error from "../../assets/gif/error.gif";
 import { NavLink } from "react-router-dom";
-import { Modes } from "../../style/Modes";
 import { IoReturnDownBackSharp } from "react-icons/io5";
 
 export const Error = () => {
   return (
     <div className="h-screen font-roboto">
-      <Modes />
       <div className="justify-center flex py-6">
         <div>
           <img src={error} className="mask mask-squircle w-80 h-80" />
