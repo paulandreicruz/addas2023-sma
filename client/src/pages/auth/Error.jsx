@@ -15,11 +15,11 @@ export const Error = () => {
       <div>
         <div>
           <p className="mb-2 text-2xl font-bold text-center md:text-3xl">
-            <span className="text-red-500">Oops!</span>{" "}
+            <span className="text-red-400">Oops!</span>{" "}
             <span className="">Page not found</span>
           </p>
           <p className="mb-4 text-center md:text-lg">
-            The page you’re looking for doesn’t exist.
+            The page you’re looking for doesn’t exist. Thank You!
           </p>
         </div>
       </div>
