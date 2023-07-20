@@ -1,17 +1,18 @@
 //
 import { ProfileCard } from "../components/cards/ProfileCard";
 import { SearchForm } from "../components/forms/SearchForm";
+import { FollowersCard } from "../components/cards/FollowersCard";
 
 //
 import logo from "../assets/pictures/logo.png";
-import { FollowersCard } from "../components/cards/FollowersCard";
+import { NavSettings } from "../components/nav/NavSettings";
 
 export const Home = () => {
   return (
     <>
       <div className="md:flex">
-        <div className="hidden md:block md:max-w-[300px] font-roboto ml-7 mb-5 items-center">
-          <div className="md:flex md:overflow-y-auto items-center">
+        <div className="hidden md:block md:max-w-[450px] font-roboto ml-7 mb-5 items-center">
+          <div className="md:flex overflow-y-auto items-center">
             <div className="text-center">
               <img src={logo} alt="" className="w-12" />
             </div>
@@ -28,11 +29,11 @@ export const Home = () => {
         </div>
         <div className="md:flex-1 mx-auto">
           <div className="text-center">
-              <p>TIMELINE POST</p>
+            <p>TIMELINE POST</p>
           </div>
         </div>
-        <div className="md:flex hidden">
-          RIGHT SIDE SETTINGS
+        <div className="md:flex hidden md:w-[350px]">
+          <NavSettings />
         </div>
       </div>
     </>

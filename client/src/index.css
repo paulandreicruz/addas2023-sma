@@ -13,3 +13,7 @@
 /* .btn {
   @apply bg-inherit
 } */
+
+#body {
+  @apply scroll-smooth
+}
