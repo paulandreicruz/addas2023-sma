@@ -1,8 +1,10 @@
+import img from "../../assets/pictures/lebron.png"
+
 export const MockFollowers = [
   {
     name: "Andrei Cruz",
     username: "revlonsemaj",
-    img: "Asd",
+    img: img,
   },
   {
     name: "Andrei Jebs",
@@ -17,11 +19,11 @@ export const MockFollowers = [
   {
     name: "Andrei jeb",
     username: "revlonsemaj",
-    img: "Asd",
+    img: "asd",
   },
   {
     name: "Andrei jeb",
-    username: "revlonsemaj",
+    username: "jenron",
     img: "Asd",
   },
 ];

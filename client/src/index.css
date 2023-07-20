@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.card {
+/* .card {
     @apply border-gray-600;
-  }
+  } */
+
+/* .btn {
+  @apply bg-inherit
+} */
