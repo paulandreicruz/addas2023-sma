@@ -12,8 +12,8 @@ export const TrendsCard = () => {
     
   return (
     <div className="font-roboto">
-      <div className="font-bungee text-center py-2 mx-auto card bg-base-300 mt-5">
-        <span className="uppercase text-lg">TRENDS</span>
+      <div className="font-bungee text-center bg-inherit glass mt-5 rounded-full shadow-lg shadow-sky-300">
+        <span className="uppercase text-2xl mt-4 shadow">TRENDS</span>
         {trends.map((trend, index) => {
         return (
           <div className="py-4 font-roboto " key={index}>

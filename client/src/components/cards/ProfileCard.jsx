@@ -2,7 +2,7 @@ import lebron from "../../assets/pictures/lebron.png";
 
 export const ProfileCard = () => {
   return (
-      <div className="card w-auto font-roboto bg-base-300 glass shadow-2xl border-current hover:-translate-y-1 hover:scale-110 duration-300 ">
+      <div className="card w-auto font-roboto bg-inherit glass shadow-lg shadow-sky-300 border-current hover:-translate-y-1 hover:scale-110 duration-300 ">
         <figure className="">
           <img
             src={lebron}

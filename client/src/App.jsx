@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { Home } from "./pages/home";
+import { Home } from "./pages/Home";
 import { Error } from "./pages/auth/Error";
 import { Modes } from "./style/Modes";
 
