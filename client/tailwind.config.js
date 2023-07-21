@@ -8,6 +8,7 @@ export default {
     fontFamily: {
       roboto: ["Roboto", "sans-serif"],
       anton: ["Anton", "sans-serif"],
+      bungee: ["Bungee Shade", "cursive"]
     },
   },
   daisyui: {

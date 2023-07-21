@@ -9,7 +9,7 @@ export const FollowersCard = () => {
   return (
     <div className="">
       <div className="md:flex items-center justify-center">
-        <div className="font-roboto mr-4">Who to follow</div>
+        <div className="font-bungee mr-4">Who to follow</div>
         <div>
           <SlUserFollow size={20} className="" />
         </div>
