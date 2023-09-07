@@ -6,6 +6,7 @@ import { FollowersCard } from "../components/cards/FollowersCard";
 //
 import logo from "../assets/pictures/logo.png";
 import { NavSettings } from "../components/nav/NavSettings";
+import { TimelinePost } from "./timeline/TimelinePost";
 
 export const Home = () => {
   return (
@@ -29,7 +30,7 @@ export const Home = () => {
         </div>
         <div className="md:flex-1 mx-auto">
           <div className="text-center">
-            <p>TIMELINE POST</p>
+            <TimelinePost />
           </div>
         </div>
         <div className="md:flex hidden md:w-[350px]">
